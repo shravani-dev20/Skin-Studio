@@ -36,11 +36,11 @@ const Navigation: React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center justify-center md:justify-start py-1">
             <img 
               src="/logo.png" 
               alt="Skin Studio Logo" 
-              className="h-15 lg:h-16 w-auto transition-all duration-300 rounded-full"
+              className="h-8 w-8 xs:h-10 xs:w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-20 xl:w-20 transition-all duration-300 rounded-full object-cover border-2 border-pink-200 shadow-sm bg-white"
             />
           </div>
 

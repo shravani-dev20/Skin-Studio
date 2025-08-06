@@ -23,10 +23,10 @@ const Contact: React.FC = () => {
   }, []);
 
   const businessHours = [
-    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "9:00 AM - 4:00 PM" },
-    { day: "Sunday", hours: "Closed" }
-  ];
+    { day: "Monday - Sunday", hours: "10:00 AM - 10:00 PM" },
+  //   { day: "Saturday", hours: "9:00 AM - 4:00 PM" },
+  //   { day: "Sunday", hours: "Closed" }
+   ];
 
   return (
     <section id="contact" ref={sectionRef} className="py-20 bg-gray-50">
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
                     <p className="text-gray-600">
-                    Door No 1-68-21, Near Mahatma Gandhi Cancer Hospital, Opposite MVP Jewellers, MVP Colony-530017
+                    Girijan Bhavan, MVP Double Rd, MVP Sector 7, Sector 5, MVP Colony, Visakhapatnam, Andhra Pradesh 530017
                     </p>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
                     <p className="text-gray-600">
                       <a href="tel:+07487882451" className="hover:text-pink-600 transition-colors">
-                        +91 0748788 2451
+                        +91 748788 2451
                       </a>
                     </p>
                   </div>
@@ -119,29 +119,17 @@ const Contact: React.FC = () => {
           <div className={`transform transition-all duration-1000 delay-300 ${
             isVisible ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
           }`}>
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full min-h-[600px]">
-              <div className="h-full">
-                {/* Map placeholder - in a real application, you would use Google Maps API or similar */}
-                <div className="h-full bg-gray-200 relative flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <MapPin className="w-16 h-16 text-pink-600 mx-auto mb-4" />
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Find Us Here</h4>
-                    <p className="text-gray-600 mb-4">
-                      123 Beach Road, MVP Colony<br />
-                      Visakhapatnam, Andhra Pradesh 530017
-                    </p>
-                    <a
-                      href="https://maps.google.com/?q=Visakhapatnam+MVP+Colony"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-3 bg-pink-600 text-white font-semibold rounded-xl hover:bg-pink-700 transition-colors duration-300"
-                    >
-                      <MapPin className="w-5 h-5 mr-2" />
-                      View on Google Maps
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div className="mapdiv h-full relative w-full aspect-video rounded-2xl overflow-hidden border-2 border-pink-200 shadow-lg min-h-[600px]">
+              { <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60803.85516342168!2d83.2945946!3d17.7332826!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39431d5a517929%3A0xff65b0af26ac0307!2sSkin%20Studio%20by%20Dr.Kathyayani%20-%20Best%20Skin%2C%20Hair%20%26%20Cosmetology%20Centre!5e0!3m2!1sen!2sin!4v1754472457329!5m2!1sen!2sin"
+                className="absolute top-0 left-0 w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map Location"
+              ></iframe> }
+              
             </div>
           </div>
         </div>
