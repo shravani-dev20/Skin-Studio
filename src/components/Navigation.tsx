@@ -31,16 +31,19 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
-          <div className="flex-shrink-0 flex items-center justify-center md:justify-start py-1">
-            <img 
-              src="/logo.png" 
-              alt="Skin Studio Logo" 
-              className="h-8 w-8 xs:h-10 xs:w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-20 xl:w-20 transition-all duration-300 rounded-full object-cover border-2 border-pink-200 shadow-sm bg-white"
+        <div className="flex items-center justify-between h-16 lg:h-20 w-full">
+          {/* Logo Left Aligned Always */}
+          <div className="flex-shrink-0 flex items-center justify-start py-1 flex-1">
+            <img
+              src="/logo.png"
+              alt="Skin Studio Logo"
+              className="h-14 w-14 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 transition-all duration-300 rounded-full object-cover border-2 border-pink-200 shadow-sm bg-white"
             />
           </div>
 
@@ -69,14 +72,15 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-md transition-colors duration-300 ${
+              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
+              aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
             </button>
           </div>
         </div>
