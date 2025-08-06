@@ -41,9 +41,10 @@ const Navigation: React.FC = () => {
           {/* Logo Left Aligned Always */}
           <div className="flex-shrink-0 flex items-center justify-start py-1 flex-1">
             <img
-              src="/logo.png"
+              src="/logo.jpg"
               alt="Skin Studio Logo"
               className="h-14 w-14 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 transition-all duration-300 rounded-full object-cover border-2 border-pink-200 shadow-sm bg-white"
+              loading="eager"
             />
           </div>
 
