@@ -105,15 +105,15 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-pink-400 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  123 Beach Road, MVP Colony<br />
-                  Visakhapatnam, AP 530017
+                  Girijan Bhavan, MVP Double Rd, MVP Sector 7, Sector 5, MVP Colony, Visakhapatnam, Andhra Pradesh 530017<br />
+        
                 </span>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-pink-400 flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-gray-300 hover:text-pink-300 transition-colors text-sm">
-                  +91 98765 43210
+                <a href="tel:+917487882451" className="text-gray-300 hover:text-pink-300 transition-colors text-sm">
+                  +91 7487882451
                 </a>
               </div>
               
@@ -128,15 +128,14 @@ const Footer: React.FC = () => {
             <div className="mt-6 p-4 bg-white/5 rounded-xl">
               <p className="text-sm text-gray-300">
                 <strong className="text-pink-300">Office Hours:</strong><br />
-                Mon-Fri: 9:00 AM - 6:00 PM<br />
-                Sat: 9:00 AM - 4:00 PM
+                Mon-Sun: 10:00 AM - 10:00 PM<br />
               </p>
             </div>
           </div>
         </div>
 
         {/* Instagram Preview Section */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
+        {/* <div className="mt-12 pt-8 border-t border-gray-700">
           <h4 className="text-lg font-semibold mb-6 text-pink-300 text-center">Follow Our Journey</h4>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[...Array(6)].map((_, index) => (
@@ -149,7 +148,30 @@ const Footer: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
+       {/* Instagram Preview Section */}
+<div className="mt-12 pt-8 border-t border-gray-700">
+  <h4 className="text-lg font-semibold mb-6 text-pink-300 text-center">Follow Our Journey</h4>
+  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+    {[
+      "/gallery.png",
+      "/gallery1.png",
+      "/gallery2.png",
+       "/gallery3.png", 
+       "/gallery4.png",
+       "/gallery5.png"
+      // "/journey6.jpg"
+    ].map((src, index) => (
+      <div key={index} className="aspect-square rounded-lg overflow-hidden group cursor-pointer">
+        <img
+          src={src}
+          alt={`Our journey ${index + 1}`}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">

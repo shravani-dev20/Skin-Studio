@@ -44,14 +44,12 @@ const About: React.FC = () => {
           <div className={`relative transform transition-all duration-1000 ${
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
           }`}>
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl shadow-2xl overflow-hidden">
-                <img
-                  src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=500"
-                  alt="Dr. A. Kathyayani"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl bg-white">
+              <img
+                src="/Kathyani.png"
+                alt="Dr. A. Kathyayani"
+                className="w-full h-auto object-contain rounded-2xl"
+              />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-pink-600">MD</div>
